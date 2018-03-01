@@ -23,4 +23,7 @@
 	<remove-node path="/api/package[@name='com.sinch.gson.internal']/class[@name='LinkedTreeMap']/method[@name='entrySet' and count(parameter)=0]" />
 
 	<remove-node path="/api/package[@name='com.sinch.relinker']/interface[@name='ReLinker.LoadListener']"/>
+
+  <attr path="/api/package[@name='com.sinch.android.rtc.internal.natives']/class[@name='StatsReport.Value']"
+        name="managedName">StatsReport.InnerValue</attr>
 </metadata>

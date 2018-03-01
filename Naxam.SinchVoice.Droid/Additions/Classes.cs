@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Android.OS;
 using Android.Runtime;
 using Java.Lang;
@@ -20,10 +21,7 @@ namespace Com.Sinch.Android.Rtc.Internal.Service.Http
     {
         partial class AsyncHttpRequest
         {
-            protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
-            {
-                return DoInBackground(@params as Java.Lang.Void[]);
-            }
+
         }
     }
 }
@@ -34,23 +32,20 @@ namespace Com.Sinch.Gson.Internal.Bind
     {
         partial class Adapter
         {
-            public override void Write(global::Com.Sinch.Gson.Stream.JsonWriter p0, global::Java.Lang.Object p1)
-            {
-                Write(p0, p1 as global::System.Collections.ICollection);
-            }
 
-            public override global::Java.Lang.Object Read(global::Com.Sinch.Gson.Stream.JsonReader p0)
-            {
-                var localRef = JavaCollection.ToLocalJniHandle(ReadCollection(p0));
-                try
-                {
-                    return new Java.Lang.Object(localRef, JniHandleOwnership.TransferLocalRef);
-                }
-                finally
-                {
-                    JNIEnv.DeleteLocalRef(localRef);
-                }
-            }
+
+            //public override global::Java.Lang.Object Read(global::Com.Sinch.Gson.Stream.JsonReader p0)
+            //{
+            //    var localRef = JavaCollection.ToLocalJniHandle(ReadCollection(p0));
+            //    try
+            //    {
+            //        return new Java.Lang.Object(localRef, JniHandleOwnership.TransferLocalRef);
+            //    }
+            //    finally
+            //    {
+            //        JNIEnv.DeleteLocalRef(localRef);
+            //    }
+            //}
         }
     }
 
@@ -71,23 +66,20 @@ namespace Com.Sinch.Gson.Internal.Bind
     {
         partial class Adapter
         {
-            public override void Write(global::Com.Sinch.Gson.Stream.JsonWriter p0, global::Java.Lang.Object p1)
-            {
-                Write(p0, p1 as global::System.Collections.IDictionary);
-            }
 
-            public override global::Java.Lang.Object Read(global::Com.Sinch.Gson.Stream.JsonReader p0)
-            {
-                var localRef = JavaDictionary.ToLocalJniHandle(ReadDictionary(p0));
-                try
-                {
-                    return new Java.Lang.Object(localRef, JniHandleOwnership.TransferLocalRef);
-                }
-                finally
-                {
-                    JNIEnv.DeleteLocalRef(localRef);
-                }
-            }
+
+            //public override global::Java.Lang.Object Read(global::Com.Sinch.Gson.Stream.JsonReader p0)
+            //{
+            //    var localRef = JavaDictionary.ToLocalJniHandle(ReadDictionary(p0));
+            //    try
+            //    {
+            //        return new Java.Lang.Object(localRef, JniHandleOwnership.TransferLocalRef);
+            //    }
+            //    finally
+            //    {
+            //        JNIEnv.DeleteLocalRef(localRef);
+            //    }
+            //}
         }
     }
 
@@ -143,40 +135,51 @@ namespace Com.Sinch.Android.Rtc.Internal.Client.Calling
     }
 }
 
-namespace Com.Sinch.Gson.Internal { 
-    partial class LinkedHashTreeMap {
-		static IntPtr id_entrySet;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.sinch.gson.internal']/class[@name='LinkedHashTreeMap']/method[@name='entrySet' and count(parameter)=0]"
-		[Register("entrySet", "()Ljava/util/Set;", "")]
-		public override unsafe global::System.Collections.ICollection EntrySet()
-		{
-			if (id_entrySet == IntPtr.Zero)
-				id_entrySet = JNIEnv.GetMethodID(class_ref, "entrySet", "()Ljava/util/Set;");
-			try
-			{
+namespace Com.Sinch.Gson.Internal
+{
+    partial class LinkedHashTreeMap
+    {
+        //internal static new IntPtr class_ref
+        //{
+        //    get
+        //    {
+        //        return JNIEnv.FindClass("com/sinch/gson/internal/LinkedHashTreeMap", ref java_class_handle);
+        //    }
+        //}
+
+        static IntPtr id_entrySet;
+        // Metadata.xml XPath method reference: path="/api/package[@name='com.sinch.gson.internal']/class[@name='LinkedHashTreeMap']/method[@name='entrySet' and count(parameter)=0]"
+        [Register("entrySet", "()Ljava/util/Set;", "")]
+        public override unsafe global::System.Collections.ICollection EntrySet()
+        {
+            if (id_entrySet == IntPtr.Zero)
+                id_entrySet = JNIEnv.GetMethodID(class_ref, "entrySet", "()Ljava/util/Set;");
+            try
+            {
                 return global::Android.Runtime.JavaSet.FromJniHandle(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_entrySet), JniHandleOwnership.TransferLocalRef);
-			}
-			finally
-			{
-			}
-		}
+            }
+            finally
+            {
+            }
+        }
     }
 
-    partial class LinkedTreeMap {
-		static IntPtr id_entrySet;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.sinch.gson.internal']/class[@name='LinkedTreeMap']/method[@name='entrySet' and count(parameter)=0]"
-		[Register("entrySet", "()Ljava/util/Set;", "")]
-		public override unsafe global::System.Collections.ICollection EntrySet()
-		{
-			if (id_entrySet == IntPtr.Zero)
-				id_entrySet = JNIEnv.GetMethodID(class_ref, "entrySet", "()Ljava/util/Set;");
-			try
-			{
-				return global::Android.Runtime.JavaSet.FromJniHandle(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_entrySet), JniHandleOwnership.TransferLocalRef);
-			}
-			finally
-			{
-			}
-		}
+    partial class LinkedTreeMap
+    {
+        static IntPtr id_entrySet;
+        // Metadata.xml XPath method reference: path="/api/package[@name='com.sinch.gson.internal']/class[@name='LinkedTreeMap']/method[@name='entrySet' and count(parameter)=0]"
+        [Register("entrySet", "()Ljava/util/Set;", "")]
+        public override unsafe global::System.Collections.ICollection EntrySet()
+        {
+            if (id_entrySet == IntPtr.Zero)
+                id_entrySet = JNIEnv.GetMethodID(class_ref, "entrySet", "()Ljava/util/Set;");
+            try
+            {
+                return global::Android.Runtime.JavaSet.FromJniHandle(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_entrySet), JniHandleOwnership.TransferLocalRef);
+            }
+            finally
+            {
+            }
+        }
     }
 }

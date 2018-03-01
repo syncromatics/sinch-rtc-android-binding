@@ -3,13 +3,13 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.SinchVoice.Droid</id>
-        <version>3.11.0</version>
+        <version>3.12.3</version>
         <description>Xamarin Binding Library - Sinch Android SDK - Voice/Video</description>
         <authors>Vu Duc Tuyen</authors>
         <owners>NAXAM CO.,LTD</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Sinch Android SDK - Voice/Video</title>
-        <releaseNotes>Sinch Android SDK - Voice/Video v3.11.0</releaseNotes>
+        <releaseNotes>Sinch Android SDK - Voice/Video v3.12.3</releaseNotes>
         <summary>Xamarin Binding Library - Sinch Android SDK - Voice/Video</summary>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/NAXAM/sinch-rtc-android-binding</projectUrl>
